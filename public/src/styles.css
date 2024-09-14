@@ -1,0 +1,170 @@
+body {
+  font-family: Poppins, sans-serif;
+  box-sizing: border-box; /* Asegura que el padding y border se incluyan en el tamaño */
+  margin: 0;
+  height: 100vh;
+  background: rgb(2, 0, 36);
+  background-image: 
+  linear-gradient(90deg, rgba(2,0,36,0.7) 0%, rgba(11,1,128,0.6) 52%, rgba(0,201,254,0.4) 100%),
+    url("./img/topography.svg");
+    display: flex;
+    justify-content: center;
+}
+
+  
+h1 {
+  margin: 0 0 10px 0;
+  color: white;
+  text-align: center;
+}
+
+h2{
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+}
+
+#app {
+    width: 100%;
+    padding: 30px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px;
+    align-items: flex-start; /* Alinea los elementos al principio */
+
+
+}
+
+
+.form-container, .todo-list-container{
+    background-color: white;
+    padding: 25px;
+}
+
+.todo-list-container {
+    background-color: white;
+    padding: 25px;
+    display: inline-block; /* Ajusta el tamaño al contenido */
+    min-width: 0; /* Evita que el contenedor tenga un ancho mínimo */
+  }
+
+  .todo-list-container:empty {
+    display: none; /* Oculta el contenedor cuando está vacío */
+  }
+
+
+.form-container .box{
+    display: flex;
+    flex-direction: column;
+    max-width: auto; /* Evita que el contenedor se extienda */
+    align-items: flex-start; /* Alinea los inputs al principio */
+    margin-bottom: 10px;
+}
+
+.box label{
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.box select{
+    font-size: 13px;
+    padding: 5px;
+}
+
+.box input{
+    font-size: 13px;
+    padding: 5px;
+}
+
+.todo-list-container table{
+    width: 100%;
+}
+
+table caption{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+table, td, th{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-collapse: collapse;
+}
+
+/* Para navegadores basados en WebKit (Chrome, Safari, Edge) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#tareaBtn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    background-color: #010f41;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0.3px 0.3px 0.3px 0.3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+
+}
+
+#tareaBtn:hover{
+    background-color: #223fa6;
+
+}
+
+th {
+    background-color: #010f41;
+    color: white;
+    font-size: 15px;
+}
+
+td > a {
+    cursor: pointer;
+}
+
+tbody > tr > td {
+    text-align: center;
+    font-size: 13px;
+}
+
+tbody > tr:nth-child(even){
+    background-color: #f5ffff;
+}
+
+
+.svg-editar path{
+    fill: #029eff;
+}
+
+.svg-eliminar path{
+    fill:#ff0000c7;
+}
+
+.prioridad-Normal > span{
+    border: 2px solid #ffae00;
+    background-color: #ffca59;
+    border-radius: 3px;
+    padding: 2px 10px;
+}
+
+.prioridad-Baja > span{
+    border: 2px solid #ffee00;
+    background-color: #fff787;
+    border-radius: 3px;
+    padding: 2px 10px;
+}
+
+.prioridad-Alta > span{
+    border: 2px solid #ff4d00;
+    background-color: #ff844f;
+    border-radius: 3px;
+    padding: 2px 10px;
+}

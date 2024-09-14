@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO LIST APP</title>
+    <link rel="stylesheet" href="./public/src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <h1>TODO LIST</h1>
+
+      <main class="main">
+        <form class="form-container">
+          <h2>Añadir tareas</h2>
+          <div class="box">
+            <label for="name">Nombre</label>
+            <input type="text" name="name" placeholder="Nombre" id="name" required>
+          </div>
+          <div class="box">
+            <label for="tipe-select">Tipo de tarea</label>
+            <select id="tipe-select" required>
+              <option value="" disabled selected>--Seleccionar tipo--</option>
+              <option value="Entretenimiento">Entretenimiento</option>
+              <option value="Desarrollo personal">Desarrollo personal</option>
+              <option value="Estudio">Estudio</option>
+              <option value="Salud y ejercicio">Salud y ejercicio</option>
+              <option value="Viajes">Viajes</option>
+            </select>
+          </div>
+          <div class="box">
+            <label for="priority">Prioridad</label>
+            <select required id="priority">
+              <option value="Baja">Baja</option>
+              <option selected value="Normal">Normal</option>
+              <option value="Alta">Alta</option>
+            </select>
+          </div>
+          <div class="box">
+            <label for="desc">Descripción</label>
+            <textarea type="text" name="desc"  id="desc"></textarea>
+          </div>
+          <div class="box">
+            <label for="time">Tiempo estimado (min)</label>
+            <input required type="number" name="time" id="time">
+          </div>
+
+          <button id="tareaBtn" type="submit">Crear nueva tarea</button>
+        </form>
+        <div class="todo-list-container">
+          <table id="table">
+            <caption>Lista de tareas</caption>
+            <thead>
+              <th>Tarea</th>
+              <th>Tipo</th>
+              <th>Prioridad</th>
+              <th>Duración</th>
+              <th>Editar</th>
+              <th>Eliminar</th> 
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="public/src/main.js"></script>
+  </body>
+</html>
